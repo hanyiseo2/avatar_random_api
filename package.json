@@ -1,0 +1,16 @@
+{
+  "name": "avatar_image_api",
+  "version": "1.0.0",
+  "description": "To create a random avatar image generator",
+  "main": "app.ts",
+  "scripts": {
+    "start": "ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
