@@ -36,15 +36,36 @@ export class SVG {
     this.elements = [];
   }
 
-  public addElement(elem: SVGElement, fill?: string): void {
+  public addElement(elem: SVGElement[], fill?: string): SVG {
     const elemCopy = _.cloneDeep(elem);
     if (fill) {
       elemCopy[Object.keys(elemCopy)[0]]._attr.fill = fill;
     }
-    this.elements.push(elemCopy);
+    this.elements.push(elemCopy[0]);
+    return this;
   }
 
   public toXml(): string {
     return xml({ svg: [{ _attr: this.svg._attr }, ...this.elements] });
+  }
+
+  static createPathElement(d: string, fill: string): SVGElement {
+    return {
+      path: {
+        _attr: { d, fill },
+      },
+    };
+  }
+
+  static createRectElement(
+    width: string,
+    height: string,
+    fill: string
+  ): SVGElement {
+    return {
+      rect: {
+        _attr: { width, height, fill },
+      },
+    };
   }
 }
