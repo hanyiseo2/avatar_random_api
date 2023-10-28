@@ -1,24 +1,26 @@
 import { SVG } from "./SVG";
-import { hairs, clothes } from "./imageData";
+import { getAssets } from "./imageData";
 
 type AvatarConfig = {
+  author: string;
   hair: number;
   cloth: number;
   background: number;
   face: number;
 };
 
-class Avatar {
-  static create({ hair, cloth, background, face }: AvatarConfig) {
-    const svg = new SVG(200, 200);
-
-    hairs[hair].elements.forEach((e) => svg.addElement(e));
-    clothes[cloth].elements.forEach((e) => svg.addElement(e));
-
-    return svg.toXml();
+export class Avatar {
+  static create(config: AvatarConfig): string {
+    let svg = new SVG(200, 200)
+      .addElement(
+        getAssets(config.author, "background")[config.background].elements
+      )
+      .addElement(getAssets(config.author, "hairs")[config.hair].elements)
+      .addElement(getAssets(config.author, "clothes")[config.cloth].elements)
+      .addElement(getAssets(config.author, "face")[config.face].elements)
+      .toXml();
+    return svg;
   }
-
-  static createFromHash(randomstate: number) {}
 }
 
 export default Avatar;
