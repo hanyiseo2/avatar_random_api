@@ -8,18 +8,18 @@ type AvatarConfig = {
   background: number;
   face: number;
 };
-
 export class Avatar {
   static create(config: AvatarConfig): string {
-    let svg = new SVG(200, 200)
-      .addElement(
-        getAssets(config.author, "background")[config.background].elements
-      )
-      .addElement(getAssets(config.author, "hairs")[config.hair].elements)
-      .addElement(getAssets(config.author, "clothes")[config.cloth].elements)
-      .addElement(getAssets(config.author, "face")[config.face].elements)
-      .toXml();
-    return svg;
+    const background = getAssets(config.author,"background")
+    const hairs = getAssets(config.author,"hairs")
+    const clothes = getAssets(config.author,"clothes")
+    const face = getAssets(config.author,"face")
+    let svg = new SVG(200, 200).addElement(background[config.background].elements)
+    .addElement(hairs[config.hair].elements)
+    .addElement(clothes[config.cloth].elements)
+    .addElement(face[config.face].elements)
+    .toXml()
+      return svg;
   }
 }
 
