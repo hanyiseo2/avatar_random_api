@@ -1,4 +1,4 @@
-export function createRandomAssetIndex(val:number){
+export function getRandomInt(val:number){
     let randomIdx = Math.floor(Math.random()*val)
     return randomIdx
 }

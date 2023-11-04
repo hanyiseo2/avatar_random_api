@@ -1,5 +1,5 @@
 import { SVG } from "./SVG";
-import { getAssetsAndCount } from "./imageData";
+import { getAssets } from "./imageData";
 
 type AvatarConfig = {
   author: string;
@@ -8,18 +8,18 @@ type AvatarConfig = {
   background: number;
   face: number;
 };
-
 export class Avatar {
   static create(config: AvatarConfig): string {
-    let svg = new SVG(200, 200)
-      .addElement(
-        getAssetsAndCount(config.author, "background").assets[config.background].elements
-      )
-      .addElement(getAssetsAndCount(config.author, "hairs").assets[config.hair].elements)
-      .addElement(getAssetsAndCount(config.author, "clothes").assets[config.cloth].elements)
-      .addElement(getAssetsAndCount(config.author, "face").assets[config.face].elements)
-      .toXml();
-    return svg;
+    const background = getAssets(config.author,"background")
+    const hairs = getAssets(config.author,"hairs")
+    const clothes = getAssets(config.author,"clothes")
+    const face = getAssets(config.author,"face")
+    let svg = new SVG(200, 200).addElement(background[config.background].elements)
+    .addElement(hairs[config.hair].elements)
+    .addElement(clothes[config.cloth].elements)
+    .addElement(face[config.face].elements)
+    .toXml()
+      return svg;
   }
 }
 
