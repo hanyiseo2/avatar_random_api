@@ -1,26 +1,28 @@
 import Avatar from "./Avatar";
-import fs from "fs";
-import { getAssets } from "./imageData";
-import {getRandomInt} from './util'
+import { getAssets,getAuthorList } from "./imageData";
+import {Request, Response} from "express"
+import sha256 from "sha256"
 
-type Author = | "Cecile";
-const authors: Author[] = ["Cecile"]
-// type Author = | "Cecile"| "Hanyi" | "Hyunwoo";
-// const authors: Author[] = ["Cecile", "Hanyi","Hyunwoo"]
+export async function createAvatar(req:Request, res:Response) {
+    const params = req.query
+    const seed = params.seed ? String(params.seed) : String(Math.random())
+    const randomNumbers = sha256(seed, {asBytes: true})
 
-export async function createRandomAvatar(req:Request, res:Response) {
-    let option = ["background", "hairs", "clothes", "face"]
-    const randomIndex = Math.floor(Math.random()*authors.length)
-    const assetsArr = option.map((option)=> getRandomInt(getAssets(authors[randomIndex], option).length))
+    const authors = getAuthorList()
+    const author = authors[randomNumbers[0] % authors.length]
+    const backgrounds = getAssets(author, "background")
+    const hairs = getAssets(author, "hairs")
+    const clothes = getAssets(author, "clothes")
+    const faces = getAssets(author, "face")
     
-    const avatarConfig = Avatar.create({
-        author: authors[randomIndex],
-        background:  assetsArr[0],
-        hair: assetsArr[1],
-        cloth:  assetsArr[2],
-        face:  assetsArr[3],
-    });
-      fs.writeFileSync("image.svg", avatarConfig);
-      
+    const avatarConfig = {
+        author: author,
+        background:  randomNumbers[1] % backgrounds.length,
+        hair: randomNumbers[2] % hairs.length,
+        cloth:  randomNumbers[3] % clothes.length,
+        face:  randomNumbers[4] % faces.length,
+    }
+    const svgStr = Avatar.create(avatarConfig);
+    
+    res.send(svgStr)
 }
-export async function getCreatedImage() {}
