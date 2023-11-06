@@ -12,14 +12,21 @@ export class Avatar {
   static create(config: AvatarConfig): string {
     const background = getAssets(config.author,"background")
     const hairs = getAssets(config.author,"hairs")
-    const clothes = getAssets(config.author,"clothes")
     const face = getAssets(config.author,"face")
-    let svg = new SVG(200, 200).addElement(background[config.background].elements)
-    .addElement(hairs[config.hair].elements)
-    .addElement(clothes[config.cloth].elements)
-    .addElement(face[config.face].elements)
-    .toXml()
-      return svg;
+    const clothes = getAssets(config.author,"clothes")
+    let svg = new SVG(200, 200).addElement(background[config.background].elements);
+    if(config.author == "Jackson" || config.author == "Tom" || config.author == "Calvin"){
+      svg.addElement(clothes[config.cloth].elements);
+      svg.addElement(face[config.face].elements);
+      svg.addElement(hairs[config.hair].elements);
+    }
+    else{
+      svg.addElement(hairs[config.hair].elements);
+      svg.addElement(clothes[config.cloth].elements);
+      svg.addElement(face[config.face].elements);
+    }
+    const result = svg.toXml()
+      return result;
   }
 }
 
