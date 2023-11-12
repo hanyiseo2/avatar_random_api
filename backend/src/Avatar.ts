@@ -37,19 +37,3 @@ export class Avatar {
 }
 
 export default Avatar;
-
-// (req, res) => {
-
-//     hash = random()()(())
-
-//     cloth = hash.slice(0, 3) % clothes.length
-//     hair = hash.slice(4, 7) % hairs.length
-//     faces = hash.slice(8, 11) % face.length
-
-//     Avatar.create({
-//         cloth, hair, background, faces
-//     })
-
-//     res.send(svg)
-
-// }
