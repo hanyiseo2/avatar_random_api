@@ -1,11 +1,10 @@
 import React from "react";
+import "./App.css";
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="container">
-        <h2> Avatar </h2>
-      </div>
+      <h2> Avatar 👩🧑</h2>
     </div>
   );
 };
