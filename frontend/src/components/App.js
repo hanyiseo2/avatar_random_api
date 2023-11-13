@@ -1,18 +1,31 @@
 import React from "react";
 import AvatarComponent from "./AvatarComponent";
 import Header from "./Header";
+import "./App.css";
+import "./AvatarComponent.css";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <AvatarComponent seed="hanyii" />
-      <AvatarComponent seed="Hyunwooo" />
-      <AvatarComponent seed="Kelly" />
-      <AvatarComponent seed="Adriana" />
-      <AvatarComponent seed="Joy" />
-      <AvatarComponent seed="Brian" />
-      {/*<AvatarComponent/>*/}
+    <div className="app_container">
+      <Header className="header" />
+      <div className="avatar_grid">
+        <AvatarComponent seed="hanyii" />
+        <AvatarComponent seed="Kelly" />
+        <AvatarComponent seed="Joy" />
+        <AvatarComponent seed="Chloe" />
+        <AvatarComponent seed="Henry" />
+        <AvatarComponent seed="Bennet" />
+        <AvatarComponent seed="Charlotte" />
+        <AvatarComponent seed="Brian" />
+        <AvatarComponent seed="Vale" />
+        <AvatarComponent seed="Evelyn" />
+        <AvatarComponent seed="Wiliam" />
+        <AvatarComponent seed="Emma" />
+        <AvatarComponent seed="Adriana" />
+        <AvatarComponent seed="Julia" />
+        <AvatarComponent seed="Finn" />
+        {/*<AvatarComponent/>*/}
+      </div>
     </div>
   );
 };
