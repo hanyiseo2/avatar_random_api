@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import generateRnadomSeed from "./RandomSeed";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -13,8 +14,13 @@ const AvatarComponent = (props) => {
     const fetchAvatar = async () => {
       try {
         //random 처리
+        const finalSeed = seed || generateRnadomSeed();
+        // const url = seed
+        //   ? `http://localhost:8000/avatar?seed=${seed}`
+        //   : "http://localhost:8000/avatar";
+
         const response = await axios.get(
-          `http://localhost:8000/avatar?seed=${seed}`,
+          `http://localhost:8000/avatar?seed=${finalSeed}`,
           {
             headers: {
               accept: "application/json",
