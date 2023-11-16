@@ -10,7 +10,7 @@ export async function createAvatar(req: Request, res: Response) {
 
   const authors = getAuthorList();
   const author = authors[randomNumbers[0] % authors.length];
-  const gender: string = randomNumbers[5] % 2 === 0 ? "man" : "woman";
+  const gender: string = randomNumbers[5] % 2 === 0 ? "male" : "female";
 
   const backgrounds = getAssets("background", gender);
   const hairs = getAssets("hairs", gender);

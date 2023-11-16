@@ -2,13 +2,12 @@ import React from "react";
 import AvatarComponent from "./AvatarComponent";
 import Header from "./Header";
 import "./App.css";
-import "./AvatarComponent.css";
 
 const App = () => {
   return (
-    <div className="app_container">
+    <div className="app-container">
       <Header className="header" />
-      <div className="avatar_grid">
+      <div className="avatar-grid">
         <AvatarComponent />
         <AvatarComponent seed="Finn" />
         <AvatarComponent seed="Kelly" />

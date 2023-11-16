@@ -18,7 +18,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Red Clothes with White Collar",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -37,7 +37,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with White Buttons",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -56,7 +56,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Gray Clothes with White Buttons",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -75,7 +75,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with White Buttons",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -94,7 +94,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with Orange necktie",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -117,7 +117,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -132,7 +132,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Light Pink Clothes",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -147,7 +147,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Green Clothes",
       category: "clothes",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -162,7 +162,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Gray Dots with White Collar",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -177,7 +177,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black Clothes with White Collar and White Button",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -200,7 +200,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "White Clothes with Brown buttons",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -219,7 +219,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Light Pink Clothes",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -234,7 +234,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Dark Navy Clothes",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -249,7 +249,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Pink Dot Clothes",
       category: "clothes",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -272,7 +272,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "White curly hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -285,9 +285,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Man's White curly hairs",
+      elementName: "male's White curly hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -300,9 +300,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Man's brown curly hairs",
+      elementName: "male's brown curly hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -315,9 +315,9 @@ const assets: Asset[] = [
     meta: {
       author: "Tom",
       name: "User Avatars",
-      elementName: "Man's navy curly hairs",
+      elementName: "male's navy curly hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -330,9 +330,9 @@ const assets: Asset[] = [
     meta: {
       author: "Calvin",
       name: "User Avatars",
-      elementName: "Man's navy straight hairs",
+      elementName: "male's navy straight hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -345,9 +345,9 @@ const assets: Asset[] = [
     meta: {
       author: "Calvin",
       name: "User Avatars",
-      elementName: "Man's navy curly hairs",
+      elementName: "male's navy curly hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -360,9 +360,9 @@ const assets: Asset[] = [
     meta: {
       author: "Calvin",
       name: "User Avatars",
-      elementName: "Man's brown curly hairs",
+      elementName: "male's brown curly hairs",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -377,7 +377,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Orange tied up hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -400,7 +400,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Orange short hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -415,7 +415,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -430,7 +430,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -449,7 +449,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -471,9 +471,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Black straight man's hair",
+      elementName: "Black straight male's hair",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -486,9 +486,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Orange straight man's hair",
+      elementName: "Orange straight male's hair",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -501,9 +501,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Light pink man's hair",
+      elementName: "Light pink male's hair",
       category: "hairs",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -518,7 +518,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "white face",
       category: "face",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -531,9 +531,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Man's skin color face",
+      elementName: "male's skin color face",
       category: "face",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -546,9 +546,9 @@ const assets: Asset[] = [
     meta: {
       author: "Calvin",
       name: "User Avatars",
-      elementName: "Man's skin color face",
+      elementName: "male's skin color face",
       category: "face",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -561,9 +561,9 @@ const assets: Asset[] = [
     meta: {
       author: "Tom",
       name: "User Avatars",
-      elementName: "Man's skin color face",
+      elementName: "male's skin color face",
       category: "face",
-      gender: "man",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -578,7 +578,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "brown face",
       category: "face",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -593,7 +593,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "skin color face",
       category: "face",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -608,7 +608,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "skin color face",
       category: "face",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -623,7 +623,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "skin color face",
       category: "face",
-      gender: "woman",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -638,7 +638,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "light purple background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#D6A2E2")],
   },
@@ -648,7 +648,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "deep brown background",
       category: "background",
-      gender: "man",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#DEBA9F")],
   },
@@ -658,7 +658,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "deep brown background",
       category: "background",
-      gender: "man",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#806A6A")],
   },
@@ -668,7 +668,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "deep navy background",
       category: "background",
-      gender: "man",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#674D6D")],
   },
@@ -678,7 +678,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "deep brown background",
       category: "background",
-      gender: "man",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -688,7 +688,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "light gray background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#D0ACAC")],
   },
@@ -698,7 +698,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "light pink background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -708,7 +708,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "dark navy background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#1D0024")],
   },
@@ -718,7 +718,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "pink background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -728,7 +728,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "light brown background",
       category: "background",
-      gender: "woman",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#BA9E73")],
   },
