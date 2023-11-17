@@ -7,31 +7,27 @@ type AvatarConfig = {
   cloth: number;
   background: number;
   face: number;
+  gender: string;
 };
 export class Avatar {
   static create(config: AvatarConfig): string {
-    const background = getAssets(config.author, "background");
-    const hairs = getAssets(config.author, "hairs");
-    const face = getAssets(config.author, "face");
-    const clothes = getAssets(config.author, "clothes");
+    const backgrounds = getAssets("background", config.gender);
+    const hairs = getAssets("hairs", config.gender);
+    const faces = getAssets("face", config.gender);
+    const clothes = getAssets("clothes", config.gender);
     let svg = new SVG(200, 200).addElement(
-      background[config.background].elements
+      backgrounds[config.background].elements
     );
-    if (
-      config.author == "Jackson" ||
-      config.author == "Tom" ||
-      config.author == "Calvin"
-    ) {
+    if (config.gender == "man") {
       svg.addElement(clothes[config.cloth].elements);
-      svg.addElement(face[config.face].elements);
+      svg.addElement(faces[config.face].elements);
       svg.addElement(hairs[config.hair].elements);
     } else {
       svg.addElement(hairs[config.hair].elements);
       svg.addElement(clothes[config.cloth].elements);
-      svg.addElement(face[config.face].elements);
+      svg.addElement(faces[config.face].elements);
     }
     const result = svg.toXml();
-    console.log(result);
     return result;
   }
 }

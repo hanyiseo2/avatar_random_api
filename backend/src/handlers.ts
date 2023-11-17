@@ -10,11 +10,12 @@ export async function createAvatar(req: Request, res: Response) {
 
   const authors = getAuthorList();
   const author = authors[randomNumbers[0] % authors.length];
+  const gender: string = randomNumbers[5] % 2 === 0 ? "man" : "woman";
 
-  const backgrounds = getAssets(author, "background");
-  const hairs = getAssets(author, "hairs");
-  const clothes = getAssets(author, "clothes");
-  const faces = getAssets(author, "face");
+  const backgrounds = getAssets("background", gender);
+  const hairs = getAssets("hairs", gender);
+  const clothes = getAssets("clothes", gender);
+  const faces = getAssets("face", gender);
 
   const avatarConfig = {
     author: author,
@@ -22,9 +23,9 @@ export async function createAvatar(req: Request, res: Response) {
     hair: randomNumbers[2] % hairs.length,
     cloth: randomNumbers[3] % clothes.length,
     face: randomNumbers[4] % faces.length,
+    gender: gender,
   };
   const svgStr = Avatar.create(avatarConfig);
 
   res.send(svgStr);
-  //   res.sendFile(path.join(__dirname, 'frontend/src/')svgStr);
 }
