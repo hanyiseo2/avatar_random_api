@@ -9,22 +9,21 @@ const App = () => {
     <div className="app_container">
       <Header className="header" />
       <div className="avatar_grid">
-        <AvatarComponent seed="hanyii" />
+        <AvatarComponent />
+        <AvatarComponent seed="Finn" />
         <AvatarComponent seed="Kelly" />
-        <AvatarComponent seed="Joy" />
         <AvatarComponent seed="Chloe" />
         <AvatarComponent seed="Henry" />
-        <AvatarComponent seed="Bennet" />
+        <AvatarComponent seed="Bennett" />
         <AvatarComponent seed="Charlotte" />
-        <AvatarComponent seed="Brian" />
+        <AvatarComponent seed="Lily" />
         <AvatarComponent seed="Vale" />
         <AvatarComponent seed="Evelyn" />
         <AvatarComponent seed="Wiliam" />
         <AvatarComponent seed="Emma" />
         <AvatarComponent seed="Adriana" />
+        <AvatarComponent seed="Harper" />
         <AvatarComponent seed="Julia" />
-        <AvatarComponent seed="Finn" />
-        {/*<AvatarComponent/>*/}
       </div>
     </div>
   );
