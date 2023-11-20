@@ -11,10 +11,11 @@ type AvatarConfig = {
 };
 export class Avatar {
   static create(config: AvatarConfig): string {
-    const backgrounds = getAssets("background", config.gender);
-    const hairs = getAssets("hairs", config.gender);
-    const faces = getAssets("face", config.gender);
-    const clothes = getAssets("clothes", config.gender);
+    const backgrounds = getAssets(config.author, "background", config.gender);
+    const hairs = getAssets(config.author, "hairs", config.gender);
+    const faces = getAssets(config.author, "face", config.gender);
+    const clothes = getAssets(config.author, "clothes", config.gender);
+
     let svg = new SVG(200, 200).addElement(
       backgrounds[config.background].elements
     );

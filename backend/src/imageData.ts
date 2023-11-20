@@ -734,11 +734,12 @@ const assets: Asset[] = [
   },
 ];
 
-export function getAssets(category: string, gender: string) {
+export function getAssets(author: string, category: string, gender: string) {
   let filteredAssets = assets.filter(
     (elem) =>
-      // elem.meta.author == author &&
-      elem.meta.category == category && elem.meta.gender == gender
+      elem.meta.author == author &&
+      elem.meta.category == category &&
+      elem.meta.gender == gender
   );
   return filteredAssets;
 }
@@ -750,4 +751,19 @@ export function getAuthorList() {
       authorArray.push(assets[i].meta.author);
   }
   return authorArray;
+}
+
+export function getAuthorByGender() {
+  let authorObejct = {
+    male: [],
+    female: [],
+  };
+  for (let i = 0; i < assets.length; i++) {
+    let gender = assets[i].meta.gender;
+    let author = assets[i].meta.author;
+
+    let authorList = authorObejct[gender];
+    if (!authorList.includes(author)) authorList.push(author);
+  }
+  return authorObejct;
 }
