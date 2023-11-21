@@ -18,7 +18,7 @@ export class Avatar {
     let svg = new SVG(200, 200).addElement(
       backgrounds[config.background].elements
     );
-    if (config.gender == "man") {
+    if (config.gender == "male") {
       svg.addElement(clothes[config.cloth].elements);
       svg.addElement(faces[config.face].elements);
       svg.addElement(hairs[config.hair].elements);
