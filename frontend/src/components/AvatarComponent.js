@@ -16,7 +16,7 @@ const AvatarComponent = ({ seed: seedProps }) => {
     const fetchAvatar = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/avatar?seed=${seed}`,
+          `http://localhost:8000/?seed=${seed}`,
           {
             headers: {
               accept: "application/json",
@@ -50,7 +50,7 @@ const AvatarComponent = ({ seed: seedProps }) => {
   };
 
   const handleCopyUrl = () => {
-    const url = `http://avatar-random-api/avatar?seed=${seed}`;
+    const url = `http://avatar-random-api/seed=${seed}`;
 
     navigator.clipboard
       .writeText(url)
