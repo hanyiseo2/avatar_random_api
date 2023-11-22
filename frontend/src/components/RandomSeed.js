@@ -1,8 +1,6 @@
 const createRandomString = () => {
-  const timestamp = new Date().getTime();
-  const random = Math.floor(Math.random() * 1000);
-  const combined = timestamp + random;
-  return combined.toString(16);
+  const random = Math.floor(Math.random() * 10000);
+  return random.toString(16);
 };
 
 export default createRandomString;

@@ -2,37 +2,30 @@ import React from "react";
 import AvatarComponent from "./AvatarComponent";
 import Header from "./Header";
 import "./App.css";
+import createRandomString from "./RandomSeed";
 
 const App = () => {
   return (
     <div className="app-container">
       <Header className="header" />
       <div className="avatar-grid">
-        <AvatarComponent />
+        <AvatarComponent seed={createRandomString} />
         <AvatarComponent seed="Finn" />
         <AvatarComponent seed="Kelly" />
+        <AvatarComponent seed="Lily" />
         <AvatarComponent seed="Chloe" />
-        <AvatarComponent seed="Henry" />
         <AvatarComponent seed="Bennett" />
         <AvatarComponent seed="Charlotte" />
-        <AvatarComponent seed="Lily" />
-        <AvatarComponent seed="Vale" />
+        <AvatarComponent seed="Christine" />
+        <AvatarComponent seed="Ben" />
         <AvatarComponent seed="Evelyn" />
         <AvatarComponent seed="Wiliam" />
-        <AvatarComponent seed="Emma" />
+        <AvatarComponent seed="Ava" />
         <AvatarComponent seed="Adriana" />
         <AvatarComponent seed="Harper" />
-        <AvatarComponent seed="Julia" />
+        <AvatarComponent seed="Henry" />
       </div>
     </div>
   );
 };
 export default App;
-
-/**
- * "header"
- *
- * 각 아바타를 감싸는 container가 필요한 것 같다
- * "avatar"   "avatar"    "avatar"    "avatar"
- *  "seed"     "seed"      "seed"      "seed"
- */
