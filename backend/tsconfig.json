@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "ES6",
     "moduleResolution": "node",
-    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
     "outDir": "dist",
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["/**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
