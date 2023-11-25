@@ -29,6 +29,5 @@ export async function createAvatar(req: Request, res: Response) {
   };
 
   const svgStr = Avatar.create(avatarConfig);
-
   res.send(svgStr);
 }
