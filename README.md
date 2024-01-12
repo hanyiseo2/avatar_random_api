@@ -38,10 +38,13 @@ $ npm run start
 ## Stacks
 
 ---
+### Development
 
-### Testing
+Node.js, Typescript, React.js, Bootstrap
 
-JEST, Supertest
+### Testing 
+
+Jest, supertest
 
 ### Deployment
 
