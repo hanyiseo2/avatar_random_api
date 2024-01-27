@@ -1,0 +1,3 @@
+# BUILD
+FROM node:18 AS build
+RUN echo HELLOWORLD!
