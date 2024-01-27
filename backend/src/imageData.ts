@@ -6,6 +6,7 @@ type Asset = {
     name: string;
     elementName: string;
     category: string;
+    gender: string;
   };
   elements: SVGElement[];
 };
@@ -17,6 +18,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Red Clothes with White Collar",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -35,6 +37,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with White Buttons",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -53,6 +56,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Gray Clothes with White Buttons",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -71,6 +75,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with White Buttons",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -89,6 +94,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes with Orange necktie",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -111,6 +117,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Navy Clothes",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -125,6 +132,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Light Pink Clothes",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -139,6 +147,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Green Clothes",
       category: "clothes",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -153,6 +162,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Gray Dots with White Collar",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -167,6 +177,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black Clothes with White Collar and White Button",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -189,6 +200,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "White Clothes with Brown buttons",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -207,6 +219,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Light Pink Clothes",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -221,6 +234,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Dark Navy Clothes",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -235,6 +249,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Pink Dot Clothes",
       category: "clothes",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -251,146 +266,156 @@ const assets: Asset[] = [
       ),
     ],
   },
-{
-  meta: {
-    author: "Julia",
-    name: "User Avatars",
-    elementName: "White curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Julia",
+      name: "User Avatars",
+      elementName: "White curly hairs",
+      category: "hairs",
+      gender: "female",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M67.2121 85.392C19.5854 46.3754 64.5355 10.6882 112.825 29.6951C117.991 31.7286 132.305 23.588 145.565 32.1642C154.119 37.6965 150.79 42.0321 154.121 46.3677C157.451 50.7034 170.292 50.4482 173.105 61.7062C174.771 68.376 170.161 75.3625 170.777 80.3827C171.394 85.4029 176.262 89.928 176.494 96.5554C176.595 99.3545 176.143 102.146 175.165 104.771C174.186 107.395 172.7 109.801 170.792 111.851C168.883 113.901 166.589 115.555 164.042 116.719C161.494 117.882 158.742 118.533 155.942 118.632C155.92 124.166 153.759 129.477 149.912 133.455C146.065 137.432 140.829 139.77 135.299 139.977C131.624 140.106 122.317 140.108 114.32 135.283C94.2798 123.198 98.7762 111.248 67.2121 85.392Z",
+        "white"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M67.2121 85.392C19.5854 46.3754 64.5355 10.6882 112.825 29.6951C117.991 31.7286 132.305 23.588 145.565 32.1642C154.119 37.6965 150.79 42.0321 154.121 46.3677C157.451 50.7034 170.292 50.4482 173.105 61.7062C174.771 68.376 170.161 75.3625 170.777 80.3827C171.394 85.4029 176.262 89.928 176.494 96.5554C176.595 99.3545 176.143 102.146 175.165 104.771C174.186 107.395 172.7 109.801 170.792 111.851C168.883 113.901 166.589 115.555 164.042 116.719C161.494 117.882 158.742 118.533 155.942 118.632C155.92 124.166 153.759 129.477 149.912 133.455C146.065 137.432 140.829 139.77 135.299 139.977C131.624 140.106 122.317 140.108 114.32 135.283C94.2798 123.198 98.7762 111.248 67.2121 85.392Z",
-      "white"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Jackson",
-    name: "User Avatars",
-    elementName: "Man's White curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Jackson",
+      name: "User Avatars",
+      elementName: "male's White curly hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
+        "white"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
-      "white"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Jackson",
-    name: "User Avatars",
-    elementName: "Man's brown curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Jackson",
+      name: "User Avatars",
+      elementName: "male's brown curly hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
+        "#E6864E"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
-      "#E6864E"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Tom",
-    name: "User Avatars",
-    elementName: "Man's navy curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Tom",
+      name: "User Avatars",
+      elementName: "male's navy curly hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
+        "#1D0024"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
-      "#1D0024"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Calvin",
-    name: "User Avatars",
-    elementName: "Man's navy straight hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Calvin",
+      name: "User Avatars",
+      elementName: "male's navy straight hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
+        "white"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.653 70.1374C114.773 68.3167 117.349 67.0907 120.991 68.9827C129.623 73.4647 123.894 90.7567 114.233 90.4194C110.9 90.3034 112.428 96.9461 121.333 101.333C121.333 94.3334 132 77.0001 132.933 61.2187C143.667 57.2221 141 41.2307 133.631 41.2307C134.807 26.5701 111.333 18.9981 102.244 27.4107C93.0001 16.3314 69.6668 21.9981 68.2581 31.6101C52.2134 23.0454 41.6668 47.6647 56.6901 57.2221C62.8721 61.1554 77.3334 62.6521 98.2088 62.6521C108.226 62.6521 102.465 86.0987 99.3334 93.6667C95.3334 103.333 73.0001 104.667 66.0001 103.667C60.5334 102.886 57.6668 100.667 57.3334 99.3334C52.3334 112.667 58.6668 120.667 68.6668 120.667C85.6668 120.667 102.667 115.667 105.333 103.333C107.456 93.5181 107.339 77.6774 112.653 70.1374Z",
-      "white"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Calvin",
-    name: "User Avatars",
-    elementName: "Man's navy curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Calvin",
+      name: "User Avatars",
+      elementName: "male's navy curly hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.563 68.8059C114.683 66.9852 117.259 65.7592 120.901 67.6512C129.533 72.1332 123 89.3332 115.333 89.3332C113.333 89.3332 112.339 95.6146 121.243 99.9999C121.243 92.9999 131.91 75.6666 132.843 59.8852C143.577 55.8886 140.91 39.8973 133.541 39.8973C134.717 25.2386 111.243 17.6666 102.154 26.0793C92.91 14.9999 69.5767 20.6666 68.168 30.2786C52.1233 21.7139 41.5767 46.3332 56.6 55.8906C62.782 59.8239 77.2433 61.3206 98.1187 61.3206C101.27 61.3206 103.035 62.1032 102.154 65.9999C100.448 73.5506 104.409 78.3066 112.563 68.8059Z",
+        "#1D0024"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.563 68.8059C114.683 66.9852 117.259 65.7592 120.901 67.6512C129.533 72.1332 123 89.3332 115.333 89.3332C113.333 89.3332 112.339 95.6146 121.243 99.9999C121.243 92.9999 131.91 75.6666 132.843 59.8852C143.577 55.8886 140.91 39.8973 133.541 39.8973C134.717 25.2386 111.243 17.6666 102.154 26.0793C92.91 14.9999 69.5767 20.6666 68.168 30.2786C52.1233 21.7139 41.5767 46.3332 56.6 55.8906C62.782 59.8239 77.2433 61.3206 98.1187 61.3206C101.27 61.3206 103.035 62.1032 102.154 65.9999C100.448 73.5506 104.409 78.3066 112.563 68.8059Z",
-      "#1D0024"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Calvin",
-    name: "User Avatars",
-    elementName: "Man's brown curly hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Calvin",
+      name: "User Avatars",
+      elementName: "male's brown curly hairs",
+      category: "hairs",
+      gender: "male",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M112.563 68.8059C114.683 66.9852 117.259 65.7592 120.901 67.6512C129.533 72.1332 123 89.3332 115.333 89.3332C113.333 89.3332 112.339 95.6146 121.243 99.9999C121.243 92.9999 131.91 75.6666 132.843 59.8852C143.577 55.8886 140.91 39.8973 133.541 39.8973C134.717 25.2386 111.243 17.6666 102.154 26.0793C92.91 14.9999 69.5767 20.6666 68.168 30.2786C52.1233 21.7139 41.5767 46.3332 56.6 55.8906C62.782 59.8239 77.2433 61.3206 98.1187 61.3206C101.27 61.3206 103.035 62.1032 102.154 65.9999C100.448 73.5506 104.409 78.3066 112.563 68.8059Z",
+        "#E2672D"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M112.563 68.8059C114.683 66.9852 117.259 65.7592 120.901 67.6512C129.533 72.1332 123 89.3332 115.333 89.3332C113.333 89.3332 112.339 95.6146 121.243 99.9999C121.243 92.9999 131.91 75.6666 132.843 59.8852C143.577 55.8886 140.91 39.8973 133.541 39.8973C134.717 25.2386 111.243 17.6666 102.154 26.0793C92.91 14.9999 69.5767 20.6666 68.168 30.2786C52.1233 21.7139 41.5767 46.3332 56.6 55.8906C62.782 59.8239 77.2433 61.3206 98.1187 61.3206C101.27 61.3206 103.035 62.1032 102.154 65.9999C100.448 73.5506 104.409 78.3066 112.563 68.8059Z",
-      "#E2672D"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Julia",
-    name: "User Avatars",
-    elementName: "Orange tied up hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Julia",
+      name: "User Avatars",
+      elementName: "Orange tied up hairs",
+      category: "hairs",
+      gender: "female",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M107.243 35.1333C104.576 23.4667 117.221 14.514 130.243 20.66C160.909 35.1333 142.667 55.3333 131.333 54C120 52.6667 109.909 46.8 107.243 35.1333Z",
+        "#E0713F"
+      ),
+      SVG.createPathElement(
+        "M118.333 37C118.333 37 141 51.6667 146.667 43.6667C147.251 47.0073 144.563 56.4433 140.333 56.3333C127.682 56.004 118.333 37 118.333 37Z",
+        "#E0713F"
+      ),
+      SVG.createPathElement(
+        "M114.667 108.667C100.345 115.547 98.2553 115.179 66.6666 89.3332C19 50.3333 64 14.6666 112.333 33.6666C164.667 56.6666 147.134 93.0712 114.667 108.667Z",
+        "#E0713F"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M107.243 35.1333C104.576 23.4667 117.221 14.514 130.243 20.66C160.909 35.1333 142.667 55.3333 131.333 54C120 52.6667 109.909 46.8 107.243 35.1333Z",
-      "#E0713F"
-    ),
-    SVG.createPathElement(
-      "M118.333 37C118.333 37 141 51.6667 146.667 43.6667C147.251 47.0073 144.563 56.4433 140.333 56.3333C127.682 56.004 118.333 37 118.333 37Z",
-      "#E0713F"
-    ),
-    SVG.createPathElement(
-      "M114.667 108.667C100.345 115.547 98.2553 115.179 66.6666 89.3332C19 50.3333 64 14.6666 112.333 33.6666C164.667 56.6666 147.134 93.0712 114.667 108.667Z",
-      "#E0713F"
-    ),
-  ],
-},
-{
-  meta: {
-    author: "Claire",
-    name: "User Avatars",
-    elementName: "Orange short hairs",
-    category: "hairs",
+  {
+    meta: {
+      author: "Claire",
+      name: "User Avatars",
+      elementName: "Orange short hairs",
+      category: "hairs",
+      gender: "female",
+    },
+    elements: [
+      SVG.createPathElement(
+        "M43.0192 116.941L151.324 103.852C156.663 75.5062 150.33 57.6469 132.324 50.274C124 23 91.6019 25.2187 82.4186 27.442C51.1683 35.0091 38.0352 64.842 43.0192 116.941Z",
+        "#E6864E"
+      ),
+    ],
   },
-  elements: [
-    SVG.createPathElement(
-      "M43.0192 116.941L151.324 103.852C156.663 75.5062 150.33 57.6469 132.324 50.274C124 23 91.6019 25.2187 82.4186 27.442C51.1683 35.0091 38.0352 64.842 43.0192 116.941Z",
-      "#E6864E"
-    ),
-  ],
-},
   {
     meta: {
       author: "Claire",
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -405,6 +430,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -423,6 +449,7 @@ const assets: Asset[] = [
       name: "User Avatars",
       elementName: "Black curly hairs",
       category: "hairs",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -444,8 +471,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Black straight man's hair",
+      elementName: "Black straight male's hair",
       category: "hairs",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -458,8 +486,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Orange straight man's hair",
+      elementName: "Orange straight male's hair",
       category: "hairs",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -472,8 +501,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Light pink man's hair",
+      elementName: "Light pink male's hair",
       category: "hairs",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -487,7 +517,8 @@ const assets: Asset[] = [
       author: "Cecile",
       name: "User Avatars",
       elementName: "white face",
-      category: "face",
+      category: "faces",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -500,8 +531,9 @@ const assets: Asset[] = [
     meta: {
       author: "Jackson",
       name: "User Avatars",
-      elementName: "Man's skin color face",
-      category: "face",
+      elementName: "male's skin color face",
+      category: "faces",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -514,8 +546,9 @@ const assets: Asset[] = [
     meta: {
       author: "Calvin",
       name: "User Avatars",
-      elementName: "Man's skin color face",
-      category: "face",
+      elementName: "male's skin color face",
+      category: "faces",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -528,8 +561,9 @@ const assets: Asset[] = [
     meta: {
       author: "Tom",
       name: "User Avatars",
-      elementName: "Man's skin color face",
-      category: "face",
+      elementName: "male's skin color face",
+      category: "faces",
+      gender: "male",
     },
     elements: [
       SVG.createPathElement(
@@ -543,7 +577,8 @@ const assets: Asset[] = [
       author: "Claire",
       name: "User Avatars",
       elementName: "brown face",
-      category: "face",
+      category: "faces",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -557,7 +592,8 @@ const assets: Asset[] = [
       author: "Julia",
       name: "User Avatars",
       elementName: "skin color face",
-      category: "face",
+      category: "faces",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -571,7 +607,8 @@ const assets: Asset[] = [
       author: "Julia",
       name: "User Avatars",
       elementName: "skin color face",
-      category: "face",
+      category: "faces",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -585,7 +622,8 @@ const assets: Asset[] = [
       author: "Claire",
       name: "User Avatars",
       elementName: "skin color face",
-      category: "face",
+      category: "faces",
+      gender: "female",
     },
     elements: [
       SVG.createPathElement(
@@ -599,7 +637,8 @@ const assets: Asset[] = [
       author: "Cecile",
       name: "User Avatars",
       elementName: "light purple background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#D6A2E2")],
   },
@@ -608,7 +647,8 @@ const assets: Asset[] = [
       author: "Calvin",
       name: "User Avatars",
       elementName: "deep brown background",
-      category: "background",
+      category: "backgrounds",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#DEBA9F")],
   },
@@ -617,7 +657,8 @@ const assets: Asset[] = [
       author: "Jackson",
       name: "User Avatars",
       elementName: "deep brown background",
-      category: "background",
+      category: "backgrounds",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#806A6A")],
   },
@@ -626,7 +667,8 @@ const assets: Asset[] = [
       author: "Jackson",
       name: "User Avatars",
       elementName: "deep navy background",
-      category: "background",
+      category: "backgrounds",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#674D6D")],
   },
@@ -635,7 +677,8 @@ const assets: Asset[] = [
       author: "Tom",
       name: "User Avatars",
       elementName: "deep brown background",
-      category: "background",
+      category: "backgrounds",
+      gender: "male",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -644,7 +687,8 @@ const assets: Asset[] = [
       author: "Julia",
       name: "User Avatars",
       elementName: "light gray background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#D0ACAC")],
   },
@@ -653,7 +697,8 @@ const assets: Asset[] = [
       author: "Claire",
       name: "User Avatars",
       elementName: "light pink background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -662,7 +707,8 @@ const assets: Asset[] = [
       author: "Julia",
       name: "User Avatars",
       elementName: "dark navy background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#1D0024")],
   },
@@ -671,7 +717,8 @@ const assets: Asset[] = [
       author: "Claire",
       name: "User Avatars",
       elementName: "pink background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#FFC9B3")],
   },
@@ -680,23 +727,43 @@ const assets: Asset[] = [
       author: "Julia",
       name: "User Avatars",
       elementName: "light brown background",
-      category: "background",
+      category: "backgrounds",
+      gender: "female",
     },
     elements: [SVG.createRectElement("200", "200", "#BA9E73")],
   },
 ];
 
-export function getAssets(author: string, category: string) {
+export function getAssets(author: string, category: string, gender: string) {
   let filteredAssets = assets.filter(
-    (elem) => elem.meta.author == author && elem.meta.category == category
+    (elem) =>
+      elem.meta.author == author &&
+      elem.meta.category == category &&
+      elem.meta.gender == gender
   );
-  return filteredAssets
+  return filteredAssets;
 }
 
-export function getAuthorList(){
-  let authorArray =[]
-    for (let i =0;i<assets.length;i++){
-       if(!authorArray.includes((assets[i].meta.author))) authorArray.push(assets[i].meta.author)
-    }
-  return authorArray
+export function getAuthorList() {
+  let authorArray = [];
+  for (let i = 0; i < assets.length; i++) {
+    if (!authorArray.includes(assets[i].meta.author))
+      authorArray.push(assets[i].meta.author);
+  }
+  return authorArray;
+}
+
+export function getAuthorsWithGender(male: string) {
+  let authorObejct = {
+    male: [],
+    female: [],
+  };
+  for (let i = 0; i < assets.length; i++) {
+    let gender = assets[i].meta.gender;
+    let author = assets[i].meta.author;
+
+    let authorList = authorObejct[gender];
+    if (!authorList.includes(author)) authorList.push(author);
+  }
+  return authorObejct;
 }

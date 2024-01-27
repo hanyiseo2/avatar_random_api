@@ -7,49 +7,30 @@ type AvatarConfig = {
   cloth: number;
   background: number;
   face: number;
+  gender: string;
 };
 export class Avatar {
   static create(config: AvatarConfig): string {
-    const background = getAssets(config.author, "background");
-    const hairs = getAssets(config.author, "hairs");
-    const face = getAssets(config.author, "face");
-    const clothes = getAssets(config.author, "clothes");
+    const backgrounds = getAssets(config.author, "backgrounds", config.gender);
+    const hairs = getAssets(config.author, "hairs", config.gender);
+    const faces = getAssets(config.author, "faces", config.gender);
+    const clothes = getAssets(config.author, "clothes", config.gender);
+
     let svg = new SVG(200, 200).addElement(
-      background[config.background].elements
+      backgrounds[config.background].elements
     );
-    if (
-      config.author == "Jackson" ||
-      config.author == "Tom" ||
-      config.author == "Calvin"
-    ) {
+    if (config.gender == "male") {
       svg.addElement(clothes[config.cloth].elements);
-      svg.addElement(face[config.face].elements);
+      svg.addElement(faces[config.face].elements);
       svg.addElement(hairs[config.hair].elements);
     } else {
       svg.addElement(hairs[config.hair].elements);
       svg.addElement(clothes[config.cloth].elements);
-      svg.addElement(face[config.face].elements);
+      svg.addElement(faces[config.face].elements);
     }
     const result = svg.toXml();
-    console.log(result);
     return result;
   }
 }
 
 export default Avatar;
-
-// (req, res) => {
-
-//     hash = random()()(())
-
-//     cloth = hash.slice(0, 3) % clothes.length
-//     hair = hash.slice(4, 7) % hairs.length
-//     faces = hash.slice(8, 11) % face.length
-
-//     Avatar.create({
-//         cloth, hair, background, faces
-//     })
-
-//     res.send(svg)
-
-// }

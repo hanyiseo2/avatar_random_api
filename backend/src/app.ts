@@ -7,7 +7,7 @@ const app = express();
 
 const corsOptions: CorsOptions = {
   origin: "http://localhost:3000",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  methods: "GET",
   credentials: true,
   optionsSuccessStatus: 204,
 };
@@ -16,16 +16,11 @@ app.use(cors(corsOptions));
 
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../../frontend/src")));
-// app.get("/", frontend);
 
-/**
- *  create random avatar
- *  /avatar?seed=frankenstein
- */
-app.get("/avatar", createAvatar);
+app.get("/", createAvatar);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend/src/index.html"));
+  res.redirect("/");
 });
 
 export default app;
