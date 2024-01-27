@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import createRandomString from "./RandomSeed";
+
+import downloadLogo from "./downloadLogo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
 import "./AvatarComponent.css";
 
 const AvatarComponent = ({ seed: seedProps }) => {
@@ -13,14 +15,8 @@ const AvatarComponent = ({ seed: seedProps }) => {
   useEffect(() => {
     const fetchAvatar = async () => {
       try {
-        //random 처리
-        const finalSeed = seed || createRandomString();
-        // const url = seed
-        //   ? `http://localhost:8000/avatar?seed=${seed}`
-        //   : "http://localhost:8000/avatar";
-
         const response = await axios.get(
-          `http://localhost:8000/avatar?seed=${finalSeed}`,
+          `http://localhost:8000/?seed=${seed}`,
           {
             headers: {
               accept: "application/json",
@@ -41,13 +37,39 @@ const AvatarComponent = ({ seed: seedProps }) => {
     setSeed(event.target.value);
   };
 
+  const handleDownload = (svgElement) => {
+    const blob = new Blob([svgElement], { type: "image/svg+xml" });
+
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "avatar.svg";
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
+  const handleCopyUrl = () => {
+    const url = `http://avatar-random-api/seed=${seed}`;
+
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        console.log("URL copied to clipboard:", url);
+      })
+      .catch((error) => {
+        console.error("Error copying URL to clipboard:", error);
+      });
+  };
+
   return (
     <div className="avatar-container">
       <div
         dangerouslySetInnerHTML={{ __html: avatarSvg }}
         className="avatar-img"
       />
-      <InputGroup className="mb-3 inner-input">
+
+      <InputGroup className="mb-3 avatar-input">
         <InputGroup.Text id="basic-addon1"></InputGroup.Text>
         <Form.Control
           value={seed}
@@ -57,6 +79,18 @@ const AvatarComponent = ({ seed: seedProps }) => {
           aria-describedby="basic-addon1"
         />
       </InputGroup>
+
+      <Button
+        className="avatar-button"
+        onClick={() => handleDownload(avatarSvg)}
+      >
+        <img src={downloadLogo} alt="download logo" className="downloadLogo" />
+        <span className="tooltiptext tooltiptext_download">Download</span>
+      </Button>
+      <Button className="avatar-button" onClick={handleCopyUrl}>
+        <div style={{ color: "black", fontWeight: "bold" }}>&lt; &gt;</div>
+        <span className="tooltiptext tooltiptext_copyUrl">Copy Url link</span>
+      </Button>
     </div>
   );
 };

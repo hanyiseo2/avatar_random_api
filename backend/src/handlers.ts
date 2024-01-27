@@ -1,5 +1,5 @@
 import Avatar from "./Avatar";
-import { getAssets, getAuthorList, getAuthorByGender } from "./imageData";
+import { getAssets, getAuthorList, getAuthorsWithGender } from "./imageData";
 import { Request, Response } from "express";
 import sha256 from "sha256";
 
@@ -11,14 +11,13 @@ export async function createAvatar(req: Request, res: Response) {
   const authors = getAuthorList();
   const author = authors[randomNumbers[0] % authors.length];
 
-  const authorByGender = getAuthorByGender();
-  const maleAuthors = authorByGender["male"];
-  const gender = maleAuthors.includes(author) ? "male" : "female";
+  const maleAvatarAuthors = getAuthorsWithGender("male");
+  const gender = maleAvatarAuthors["male"].includes(author) ? "male" : "female";
 
-  const backgrounds = getAssets(author, "background", gender);
+  const backgrounds = getAssets(author, "backgrounds", gender);
   const hairs = getAssets(author, "hairs", gender);
   const clothes = getAssets(author, "clothes", gender);
-  const faces = getAssets(author, "face", gender);
+  const faces = getAssets(author, "faces", gender);
 
   const avatarConfig = {
     author,
@@ -30,6 +29,5 @@ export async function createAvatar(req: Request, res: Response) {
   };
 
   const svgStr = Avatar.create(avatarConfig);
-
   res.send(svgStr);
 }

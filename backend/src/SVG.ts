@@ -41,13 +41,12 @@ export class SVG {
     if (fill) {
       elemCopy[Object.keys(elemCopy)[0]]._attr.fill = fill;
     }
-    for(let i = 0; i < elemCopy.length; i++){
-    this.elements.push(elemCopy[i]);
+    for (let i = 0; i < elemCopy.length; i++) {
+      this.elements.push(elemCopy[i]);
     }
 
     return this;
   }
-
 
   public toXml(): string {
     return xml({ svg: [{ _attr: this.svg._attr }, ...this.elements] });

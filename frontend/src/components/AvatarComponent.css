@@ -1,5 +1,5 @@
 .avatar-container {
-  text-align: center;
+  text-align: left;
   margin-bottom: 50px;
   padding-left: 30px;
   padding-right: 30px;
@@ -11,7 +11,53 @@
   margin-bottom: 30px;
 }
 
-.inner-input {
+.avatar-input {
   margin-bottom: 10px;
   width: 90%;
+}
+
+.avatar-button {
+  background-color: antiquewhite;
+  border-color: transparent;
+  margin-bottom: 10px;
+  width: 42%;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.avatar-button:hover {
+  border-color: transparent;
+  background-color: #e5c08f;
+  visibility: visible;
+}
+
+.avatar-button:hover .tooltiptext {
+  border-color: transparent;
+  background-color: #e5c08f;
+  visibility: visible;
+}
+
+.downloadLogo {
+  width: 20px;
+  height: 20px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #d3d3d3;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 5px 3px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltiptext_download {
+  margin: 35px 0px 0px -70px;
+}
+
+.tooltiptext_copyUrl {
+  margin: 10px 0px 0px -62px;
 }

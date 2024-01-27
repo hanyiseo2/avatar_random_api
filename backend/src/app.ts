@@ -17,10 +17,10 @@ app.use(cors(corsOptions));
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../../frontend/src")));
 
-app.get("/avatar", createAvatar);
+app.get("/", createAvatar);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend/public/index.html"));
+  res.redirect("/");
 });
 
 export default app;
