@@ -12,7 +12,7 @@ const App = () => {
         <AvatarComponent seed={createRandomString} />
         <AvatarComponent seed="Finn" />
         <AvatarComponent seed="Kelly" />
-        <AvatarComponent seed="Lily" />
+        <AvatarComponent seed="Emily" />
         <AvatarComponent seed="Chloe" />
         <AvatarComponent seed="Bennett" />
         <AvatarComponent seed="Charlotte" />
@@ -24,6 +24,7 @@ const App = () => {
         <AvatarComponent seed="Adriana" />
         <AvatarComponent seed="Harper" />
         <AvatarComponent seed="Henry" />
+        <AvatarComponent seed="John" />
       </div>
     </div>
   );
