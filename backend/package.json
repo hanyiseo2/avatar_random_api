@@ -8,7 +8,7 @@
     "test": "jest",
     "pre-build": "rm -rf dist",
     "build": "npx tsc",
-    "server": "npx babel-node --presets @babel/preset-env dist/index.js"
+    "server": "npx babel-node --presets @babel/preset-env ./dist/index.js"
   },
   "author": "",
   "license": "ISC",
