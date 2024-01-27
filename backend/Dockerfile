@@ -14,4 +14,5 @@ COPY --from=build /app/package.json ./
 COPY --from=build /app/dist ./dist
 EXPOSE 8080
 RUN ls
-CMD ["npm", "run", "server"]
+# CMD ["npm", "run", "server"]
+CMD ["ls", "src"]
