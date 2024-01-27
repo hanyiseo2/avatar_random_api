@@ -10,7 +10,7 @@ RUN npm run test && npm run build
 # RUNNING SERVER
 FROM node:18
 WORKDIR /app
-COPY --from=build /package.json ./
-COPY --from=build /dist ./dist
+COPY --from=build /app/package.json ./
+COPY --from=build /app/dist ./dist
 EXPOSE 8080
 CMD ["npm", "run", "server"]
